@@ -208,6 +208,24 @@ const admin = [{
     "password": "123"
 }];
 
+
+// These two functions are used to store and retrieve data in the browser's localStorage. Here's a simple explanation:
+
+// setLocalStorage
+// This function saves data to localStorage.
+// It takes two objects, employees and admin, and converts them to strings (because localStorage only stores strings) using JSON.stringify().
+// Then it stores these strings in localStorage with the keys 'employees' and 'admin'.
+// getLocalStorage
+// This function retrieves the stored data from localStorage.
+// It reads the strings saved under the keys 'employees' and 'admin'.
+// Then it converts these strings back into their original object form using JSON.parse().
+// Why Use These Functions?
+// Persistence: Data stored in localStorage stays even after the page is refreshed or the browser is closed.
+// Reusability: The functions make it easy to reuse the logic for saving and fetching data.
+// Readability: Separating the logic into functions improves code organization and readability.
+
+
+
 export const setLocalStorage = ()=>{
     localStorage.setItem('employees',JSON.stringify(employees))
     localStorage.setItem('admin',JSON.stringify(admin))
