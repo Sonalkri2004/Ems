@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = ({handleLogin}) => {
 
     
 
@@ -10,8 +10,7 @@ const Login = () => {
 
     const submitHandler = (e)=>{
         e.preventDefault()
-        console.log(email)
-        console.log(password)
+        handleLogin(email,password)
         setEmail("")
         setPassword("")
     }
@@ -26,7 +25,7 @@ const Login = () => {
             }}
             className='flex flex-col items-center justify-center'
             >
-          <input 
+                <input 
                 value={email}
                 onChange={(e)=>{
                     setEmail(e.target.value)
@@ -48,4 +47,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Login
