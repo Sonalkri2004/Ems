@@ -215,6 +215,7 @@ const admin = [{
 // This function saves data to localStorage.
 // It takes two objects, employees and admin, and converts them to strings (because localStorage only stores strings) using JSON.stringify().
 // Then it stores these strings in localStorage with the keys 'employees' and 'admin'.
+
 // getLocalStorage
 // This function retrieves the stored data from localStorage.
 // It reads the strings saved under the keys 'employees' and 'admin'.
